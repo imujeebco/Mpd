@@ -1,0 +1,52 @@
+				<div class="navbar">
+					<div class="holder">
+						<div class="frame">
+							<?php $walker = new Walker_Custom_Menu(); ?>
+							<?php wp_nav_menu(array('container' => '','theme_location' => 'main','menu_id' => 'nav','walker' => $walker)); ?>
+						</div>
+					</div>
+				</div>
+				<div id="footer">
+					<div class="footer-holder">
+						<div class="right-panel">
+							<?php if ( !function_exists('dynamic_sidebar') || !dynamic_sidebar('Subscribe Sidebar') ) : ?><?php endif; ?>
+							<div class="social">
+								<strong class="title">Follow us</strong>
+								<ul>
+									<li><a href="twitter.com/globalEcon" class="twitter">twitter</a></li>
+									<li><a href="http://www.linkedin.com/company/2036703?trk=tyah" class="linkedin">Linkedin</a></li>
+									<li><a href="http://www.youtube.com/user/globalecon" class="youtube">YouTube</a></li>
+									<li><a href="http://www.facebook.com/pages/Global-Economics-Group/155582004497594" class="facebook">Facebook</a></li>
+									<li><a href="<?php bloginfo('rss2_url'); ?>" class="rss">RSS</a></li>
+								</ul>
+							</div>
+						</div>
+						<div class="nav-holder">
+						<?php wp_nav_menu(array( 'container_class' => '', 'theme_location' => 'bottom', 'menu_id' => '','menu_class'=>'bottom'));?>
+							<div class="nav">
+								<a href="/news-articles/">News &amp; Articles</a>
+								<ul>
+								  <?php query_posts('posts_per_page=4&post_type=post&post_status=publish');?>
+									 <?php if(have_posts()): ?>
+										  <?php while(have_posts()): the_post();?>
+											  <li><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></li>
+										  <?php endwhile; ?>
+									 <?php endif; ?>
+									<?php wp_reset_query(); ?>
+								</ul>
+							</div>
+						</div>
+					</div>
+					<div class="copyright">
+						<ul>
+							<li>&copy; 2011 Global Economics Group, Inc.  All rights reserved.</li>
+							<li><a href="/terms/">Terms</a></li>
+							<li><a href="/privacy/">Privacy Policy</a></li>
+						</ul>
+					</div>
+				</div>
+				<a class="hidden" href="#wrapper">Back to top</a>
+			</div>
+		<?php wp_footer(); ?>
+	</body>
+</html>

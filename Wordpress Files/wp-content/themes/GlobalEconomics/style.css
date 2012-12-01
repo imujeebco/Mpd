@@ -1,0 +1,204 @@
+/*
+Theme Name: GlobalEconomics
+*/
+
+
+.tmResize{
+font-size: 9px;}
+.dtteam a{
+padding: 0;
+border: 0;
+font-size: 18px;
+vertical-align: baseline;
+/*color: #2F5C83 !important;*/
+color: #476b47 !important;
+font-weight: bold;}
+
+/*10/29/2012*/
+.mgmtteam .profile-list {
+margin: 0 -69px 0 0;
+padding: 0 0 0 336px;
+list-style: none;
+width: 231px;
+} 
+.bottom {
+	list-style-type:none;
+	margin:0;
+	padding:0;
+	
+}
+.menu-bottom-container{
+	float:left;}
+#footer .bottom   li {
+	padding:0;
+}
+.author a{
+	color:#333333;
+}
+#sidebar .widget_search {
+	padding:18px 0 0 3px;
+}
+#sidebar .widget_recent_entries ul{
+	list-style-image:none;
+	list-style-position:outside;
+	list-style-type:none;
+	margin:-8px 0 0;
+	padding:0;
+}
+#sidebar .widget_recent_entries li {
+	border-bottom:1px solid #CCCCCC;
+	overflow:hidden;
+	padding:5px 0 11px;
+	width:100%;
+}
+#sidebar .widget_recent_entries a {
+	background:transparent url(images/bullet04.gif) no-repeat scroll 0 5px;
+	color:#666666;
+	float:left;
+	padding:0 0 0 10px;
+}
+#sidebar .widget_categories ul  {
+	list-style-image:none;
+	list-style-position:outside;
+	list-style-type:none;
+	margin:-8px 0 0;
+	padding:0;
+}
+#sidebar .widget_categories li {
+	border-bottom:1px solid #CCCCCC;
+	overflow:hidden;
+	padding:5px 0 11px;
+	width:100%;
+}
+#sidebar .widget_categories a {
+	background:transparent url(images/bullet04.gif) no-repeat scroll 0 5px;
+	color:#666666;
+	float:left;
+	padding:0 0 0 10px;
+}
+.wpcf7-not-valid-tip-no-ajax{
+	display:none !important; 
+}
+.navigation .prev{float:left;}
+.navigation .next{float:right;}
+#main .stButton {
+	color:#999 !important;
+	margin-left:0 !important;
+	margin-right:0 !important;
+}
+#main .stButton .chicklets {
+	background:none !important;
+	font-family:"MyriadPro",Arial,Helvetica,sans-serif !important;
+	font-size:12px !important;
+	padding-left:0 !important;
+}
+.wpcf7-not-valid-tip{
+	display:none !important; 
+}
+.post .links a, .post .links img {
+float:none;
+}
+#content ul.ul-circle
+{
+padding-left:25px;
+}
+#content ul.ul-circle li
+{
+background:transparent url(images/bullet03.gif) no-repeat scroll 2px 5px;
+padding-left:15px;
+list-style:none;
+}
+
+.mgmtteam .profile-list {
+    float: right !important;
+    list-style: none outside none;
+    margin: 0px !important;
+    padding-left: 5px !important;
+    width: 231px;
+}
+.mgmtteam p { clear:both; }
+
+.search-bar {
+margin: 0 0 18px;}
+.intro {
+padding-bottom: 10px;}
+
+/*Styling for the constant contac widget*/
+#ea{
+background: transparent none repeat scroll 0 0;
+border: 0 none;
+color: #999;
+float: left;
+font-size: 12px;
+line-height: 15px;
+margin: 0;
+padding: 7px 0 6px;
+width: 120px;}
+#go{
+background: transparent none repeat scroll 0 0;
+border: 0 none;
+color: #666;
+cursor: pointer;
+float: right;
+font-size: 12px;
+height: 30px;
+line-height: 30px;
+margin: 0;
+padding: 0 0 2px;
+width: 82px;}
+
+.one-third {
+width: 30.65%;
+}
+.one-half, .one-third, .one-fourth, .three-fourth, .two-third, .one-fifth, .two-fifth, .three-fifth, .four-fifth {
+margin-bottom: 20px;
+float: left;
+margin-right: 1%;
+position: relative;
+}
+
+.last {
+margin-bottom: 160px !important;
+}
+
+
+
+h2 {
+   color: #000000;
+   font: 18px/24px "Ubuntu-Regular", sans-serif;
+   font-weight: normal;
+}
+
+/* custom CSS */
+
+.green,
+.green_b,
+.green_b_i
+{
+color: #60544e;
+}
+
+.green_b,
+.green_b_i
+{
+font-weight: bold;
+}
+.green_b_i
+{
+font-style: italic;
+}
+
+.green_u
+{
+text-decoration: underline;
+}
+
+body {
+color: #333;
+font: 14px/17px "MyriadPro", Arial, Helvetica, sans-serif;
+line-height:150%
+
+}
+
+.info-box { margin-bottom: 5px; }
+.mar-reset { margin-left:0px !important; margin-top:3px !important; }

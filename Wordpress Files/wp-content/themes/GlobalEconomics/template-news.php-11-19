@@ -1,0 +1,61 @@
+<?php 
+/*
+	Template Name: News & Article
+*/	
+get_header(); ?>
+	<div id="main">
+		<div class="main-holder">
+		<?php if ( has_post_thumbnail() ):?>
+			<div class="page-title">
+				
+				<img src="/images/blog.png" alt="GlobalEcon Viewpoints" width="902" height="167" />
+			</div>	
+			
+		<?php else:?>
+			<div class="page-title">
+				<img src="/images/blog.png" alt="GlobalEcon Viewpoints" width="902" height="167" />
+			</div>		
+		<?php endif; ?>
+			<div class="main-container">
+				<div id="content">
+					<div class="posts">
+						
+						<?php $query = new WP_Query( 'cat=-5&post_status=publish&post_type=post');
+							if ( $query->have_posts()) : ?><?php while ( $query->have_posts()) : $query->the_post(); ?>
+						<div class="post">
+							<div class="title">
+								<h2><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h2>
+							</div>
+							<div class="posted">
+								<ul class="links">
+									<li><div class="comment-link"><?php comments_popup_link('0 comments', '1 comment', '% comments'); ?></div></li>
+									<li><?php echo str_replace(array('{url}','{title}'),array(get_permalink(),get_the_title()),st_makeEntries()); ?></li>
+									<li><a href="http://twitter.com/home?status=<?php echo str_replace('+', '%20', urlencode( the_title()) ); ?>%20-%<?php echo urlencode(the_permalink()); ?>"><img src="<?php bloginfo('template_url'); ?>/images/ico-twitter.gif" alt="image description" width="14" height="13" /></a></li>
+								</ul>
+								<p>By <?php the_author_link(); ?> on <span class="date"><?php the_time('F j, Y'); ?></span></p>
+							</div>
+							<?php the_excerpt(); ?>
+							<a href="<?php the_permalink(); ?>">Read more &raquo;</a>
+						</div>
+						<?php endwhile; ?><?php else:?>
+						<div class="post">
+							<div class="title">
+								<h2>Not Found</h2>
+							</div>
+							<p>Sorry, but you are looking for something that isn't here.</p>
+						</div>
+						<?php endif; ?>
+					</div>
+					<div class="paging">
+						<div class="hold">
+							<div>
+								<?php wp_pagenavi(); ?>
+							</div>
+						</div>
+					</div>
+				</div>
+				<?php get_sidebar(); ?>
+			</div>
+		</div>
+	</div>
+<?php get_footer(); ?>	
